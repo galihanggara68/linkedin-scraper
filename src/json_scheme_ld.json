@@ -1,0 +1,41 @@
+{
+	"search": {
+		"type": "typable",
+		"elem": ".search-global-typeahead__input",
+		"text": "''",
+		"enter": true
+	},
+	"user": {
+		"type": "clickable",
+		"elem": "a.app-aware-link.artdeco-button[href*=Profile]",
+		"effect": {
+			"type": "text",
+			"elem": "section h1"
+		}
+	},
+	"experiences": {
+			"type": "iterable",
+			"elem": "#experience ~ div ul li div div:nth-child(2)",
+			"map": {
+				"job_role": "span:nth-child(1) span",
+				"job_type": "span:nth-child(2) span",
+				"job_date": "span:nth-child(3) span"
+			}
+	},
+	"educations": {
+		"type": "iterable",
+		"elem": "#education ~ div ul li div div:nth-child(2)",
+		"map": {
+			"name": "span:nth-child(1) span",
+			"major": "span:nth-child(2) span",
+			"date": "span:nth-child(3) span"
+		}
+	},
+	"skills": {
+		"type": "iterable",
+		"elem": "#skills ~ div ul > li > div",
+		"map": {
+			"name": "div > div span.t-bold"
+		}
+	}
+}
